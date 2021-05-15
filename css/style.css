@@ -1,0 +1,228 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.todo-container
+{
+    width: 40%;
+    margin: 50px auto 20px;
+}
+.todo-container .heading
+{
+    text-align: center;
+    margin: 20px;
+    color: #e91e63;
+}
+.todo-container .add-task
+{
+    position: relative;
+    background-color: #03a9f4;
+    padding: 25px; 
+}
+.todo-container .add-task input
+{
+    width: calc(100% - 10px);
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 255, 255, .2);
+    color: #fff;
+    padding-left: 10px;
+}
+.todo-container .add-task input:focus
+{
+    outline: none;
+}
+.todo-container .add-task .plus
+{
+    position: absolute;
+    right: 12px;
+    background-color: aliceblue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+}
+.todo-container .add-task .plus:hover
+{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.todo-container .add-task .plus i
+{
+    line-height: 40px;
+    margin-left: 10px;
+    color: #e91e63;
+}
+.todo-container .tasks-content
+{
+    padding: 25px;
+    background-color: #eee;
+}
+.todo-container .tasks-content .no-tasks-message
+{
+    background-color: #fff;
+    font-size: 17px;
+    color: gray;
+}
+.todo-container .tasks-content > span
+{
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+}
+.todo-container .tasks-content > span:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+.todo-container .tasks-content .task-box .delete
+{
+    background-color: #e91e63;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.todo-container .tasks-content .task-box .delete:hover
+{
+    background-color: #fff;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+}
+.todo-container .tasks-content .task-box.finished
+{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todo-status
+{
+    width: 40%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.todo-status .tasks-count
+{
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: darkgray;
+}
+.todo-status .tasks-completed
+{
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: darkgray;
+}
+.todo-status .tasks-count span,
+.todo-status .tasks-completed span
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    padding: 2px 4px;
+    margin-left: 3px;
+    margin-right: 5px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.todo-status .tasks-count span
+{
+    background-color: #e91e63;
+}
+.todo-status .tasks-completed span
+{
+    background-color: #03a9f4;
+}
+.todo-status .btn1,.btn2{
+    padding: 10px 12px 10px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+}
+.todo-status .btn1{background-color: #e91e63;}
+.todo-status .btn1:hover
+{
+    background-color: #fff;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+}
+.todo-status .btn2{background-color: #03a9f4;}
+.todo-status .btn2:hover
+{
+    background-color: #fff;
+    color: #03a9f4;
+    border: 1px solid #03a9f4;
+}
+
+
+/* start media query to todo list */
+@media (max-width:767px) {
+    .todo-container
+    {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .todo-status
+    {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 40px;
+        flex-flow: column wrap;
+    }
+    .todo-status .tasks-count,
+    .todo-status .tasks-completed
+    {
+        width: 100%;
+        font-size: 22px;
+    }
+    .todo-status .tasks-count span,
+    .todo-status .tasks-completed span
+    {
+        padding: 4px 8px;
+        font-size: 16px;
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+    .todo-status .btn1,.btn2
+    {
+        margin-top: 30px;
+        width: 48%;
+        font-size: 19px;
+    }
+}
+/* end media query to todo list */

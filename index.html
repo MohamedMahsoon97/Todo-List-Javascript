@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo List</title>
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="todo-container">
+            <h1 class="heading">Todo List</h1>
+            <div class="add-task">
+                <input type="text" id="">
+                <span class="plus"><i class="fa fa-plus"></i></span>
+            </div>
+            <div class="tasks-content">
+                <span class="no-tasks-message">No tasks to display it</span>
+                <!-- <span class="task-box">
+                    Task one
+                    <span class="delete">Delete</span>
+                </span>
+                <span class="task-box">
+                    Task two
+                    <span class="delete">Delete</span>
+                </span> -->
+            </div>
+        </div>
+        <div class="todo-status">
+            <div>
+                <div class="tasks-count">
+                    You have
+                    <span> 0 </span>
+                    Tasks
+                    
+                </div>
+                <div class="tasks-completed">
+                    You have
+                    <span> 0 </span>
+                    Tasks Completed
+                </div>
+            </div>
+            <div>
+                <button class="btn1 tasks-clearAll" onclick="clearAllTasks()">Clear All</button>
+                <button class="btn2 tasks-finishedAll" onclick="finishedAllTasks()">Finished All</button>
+            </div>
+        </div>
+
+        <!-- <i class="fa fa-trash"></i> -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
